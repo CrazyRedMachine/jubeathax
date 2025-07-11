@@ -21,12 +21,22 @@ IO dlls are dynamically loaded plugins so **you can write your own DLL without h
 
 This is a plugin template which just prints status messages in your terminal.
 
-Meant to be used as a reference on how to add a new plugin in the build system.
+Meant to be used as a reference on how to add a new plugin.
 
 #### io_launchpad.dll
 
 - Launchpad MK2
 - Launchpad Mini MK2
+
+#### FAQ: How to add support for my own controller?
+
+If you can write C or C++ code which interacts with your controller then you can add support. It is just a matter of implementing the desired behavior
+for the different status messages sent by the engine (cf. `io_plugin_board_update` function).
+
+Refer to [cell_state.h](https://github.com/CrazyRedMachine/jubeathax/blob/main/jubeathax/cell_state.h) for more information about which messages
+are sent by the engine and when.
+
+Refer to [this commit](https://github.com/CrazyRedMachine/jubeathax/commit/bf43dcdf88be0a701c839dc42e6d321858c060f4) for more information about how to add a new plugin in the build system.
 
 ### Other Features
 
