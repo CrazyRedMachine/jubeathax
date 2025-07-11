@@ -17,6 +17,12 @@ IO dlls are dynamically loaded plugins so **you can write your own DLL without h
 
 ### Included plugins (Supported hardware)
 
+#### io_dummy.dll
+
+This is a plugin template which just prints status messages in your terminal.
+
+Meant to be used as a reference on how to add a new plugin in the build system.
+
 #### io_launchpad.dll
 
 - Launchpad MK2
